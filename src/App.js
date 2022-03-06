@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { LoginForm } from "./LoginForm/LoginForm";
 
-function App() {
+//React component name should be PascalCase
+//react component are functions that return JSX
+//React component can be functional or class based
+//JSX stands for JavaScript XML
+//JSX expressions must have one parent element
+//react components can work with data (state and props)
+//Let's create two components, login form and student list, as soon as
+//users logs in successfully, student list is displayed
+
+//we can pass data as props to a child component, prop is basically a html attribute
+//Your state should be as low in the component hierarchy as possible
+export function App() {
+  console.log("App rendered");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LoginForm/>
     </div>
   );
 }
-
-export default App;
+/*<button onClick={() => setReactClassroom((prevState) => !prevState)}>
+        Switch Classroom
+      </button>*/

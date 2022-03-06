@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { App } from "./App";
+import "./index.css";
+import { CustomerList } from './CustomerList/CustomerList';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// App is the root component of our app.
+// React application is formed by a tree of React components. (github copilot)
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/customers" element={<CustomerList role={"Visitor"} />}/>
+        <Route path="/admin" element={<CustomerList role={"Admin"} />}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
