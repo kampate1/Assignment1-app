@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/A1" element={<App />} />
         <Route path="/customers" element={<CustomerList role={"Visitor"} />}/>
         <Route path="/admin" element={<CustomerList role={"Admin"} />}/>
       </Routes>
