@@ -35,7 +35,7 @@ export const CustomerList = ({role}) => {
 
   const navigate = useNavigate();
   const move= () => {
-    navigate("/");
+    navigate("/A1");
   }
   return (
     <div className="btn lg">
